@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Flip-in 3D Demo</title>
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div id="page1">
+      <div class="envelope-container">
+        <div class="envelope" id="envelope">
+          <div class="save-date-text">
+            <p>SAVE THE DATE</p>
+          </div>
+          <h2 class="names">Việt Hồng & Sydney Phạm</h2>
+          <div class="envelope-imgs">
+            <div class="envelope-backend"></div>
+            <div class="photo-frame envelope-flap"></div>
+            <div class="envelope-front"></div>
+      
+            <a class="open-btn">Mở thiệp</a>
+          </div>
+          <div class="date">April 17, 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="page2" class="page2">
+      <div class="scroll-container">
+        <section class="hero scroll-section">
+          <div class="content">
+            <!-- <div class="icon-animate">💝</div>
+            <h1 class="text-animate">Chúc Mừng!</h1>
+            <p class="text-animate">Một lời chúc đặc biệt dành cho bạn</p>
+            <div class="floating-hearts">
+                <span class="floating-heart">💖</span>
+                <span class="floating-heart">💗</span>
+                <span class="floating-heart">💓</span>
+            </div> -->
+            <div class="logo-box fade-right">
+              <img src="assets/images/logo.png" alt="Logo" />
+            </div>
+            <div class="text-box">
+              <p class="always">Always and forever</p>
+              <p class="welcome">WELCOME TO OUR WEDDING</p>
+              <p class="names fade-left">Việt Hồng & Sydney Phạm</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="invite scroll-section">
+          <div class="content">
+            <!-- Title -->
+            <div class="ivitation-img">
+              <img src="assets/images/invitation.png" alt="">
+            </div>
+
+            <!-- Subtitle block -->
+            <div class="invite-text">
+              <p class="bold text-size-10">INVITE YOU TO JOIN US</p>
+              <p class="thin text-size-10">TO THE CELEBRATION OF OUR WEDDING</p>
+              <p class="vn text-size-7">
+                /Trân trọng kính mời bạn<br />Đến tham dự lễ cưới của chúng mình/
+              </p>
+            </div>
+
+            <!-- Photo -->
+            <div class="photo-box">
+              <img class="main" src="assets/images/couple.png" alt="couple photo" />
+              <img class="flower-01" src="assets/images/flower-01.png" alt="" />
+            </div>
+
+            <!-- Date & Time -->
+            <div class="date-block">
+              <p class="thin small text-size-10">
+                DATE & TIME
+              </p>
+              <p class="vn text-size-7">
+                /Địa điểm & Thời Gian/
+              </p>
+              <h2 class="date-main">APRIL 17, 2026</h2>
+              <p class="date-sub">/17.04.2026/</p>
+            </div>
+            <div class="divider-box">
+              <img src="assets/images/divider.png" alt="">
+            </div>
+
+            <!-- Location -->
+            <div class="location-block">
+              <h3 class="name">Finest Play Mujeres, Mexico</h3>
+              <p class="address text-size-10">
+                Calle Vialidad Paseo Mujeres, </br> Mz 1 Lt 10, Sm 3 Zona continental, 77400 Cancún, Q.R., Mexico
+              </p>
+            </div>
+
+            <!-- Button -->
+            <div class="btn-wrap">
+              <a href="#" class="map-btn">MAPS - BẢN ĐỒ</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="timeline">
+          <div class="content">
+            <div class="timeline-items">
+              <div class="item">
+                <div class="icon">
+                  <img src="assets/images/icons/gate.png" alt="">
+                </div>
+                <div class="text-box">
+                  <p class="time-and-title"><span>17:00 - 17:30</span> | Ceremony</p>
+                  <p class="vi">/Bắt đầu lễ chính/</p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="icon fade-left">
+                  <img src="assets/images/icons/cup.png" alt="">
+                </div>
+                <div class="text-box">
+                  <p class="time-and-title"><span>17:00 - 17:30</span> | Ceremony</p>
+                  <p class="vi">/TIỆC COCKTAIL/</p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="icon">
+                  <img src="assets/images/icons/dinner.png" alt="">
+                </div>
+                <div class="text-box">
+                  <p class="time-and-title"><span>17:00 - 17:30</span> | Ceremony</p>
+                  <p class="vi">/TIỆC TỐI/</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="assets/js/gsap-animations.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

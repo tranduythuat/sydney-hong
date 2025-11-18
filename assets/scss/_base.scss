@@ -1,0 +1,33 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+    font-size: 12px;
+    @include flex-center;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    box-shadow: $shadow-default;
+    @include flex-center;
+}
