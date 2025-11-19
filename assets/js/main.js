@@ -93,11 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function initScrollAnimations() {
-    // Animation cho mỗi section
-    const sections = document.querySelectorAll('.scroll-section');
+    // const sections = document.querySelectorAll('.scroll-section');
 
-    sections.forEach((section, index) => {
-      // Content card animation
+    gsap.utils.toArray('.scroll-section').forEach(() => {
       gsapFlipIn(".animate-flip");
       gsapFadeIn(".animate-fade");
       gsapFadeRight(".fade-right");
@@ -110,6 +108,9 @@ document.addEventListener("DOMContentLoaded", () => {
       gsapRollInLeft(".roll-in-left");
       gsap_rotate_bl__float(".rotate-bl--float");
     });
+
+    // sections.forEach((section, index) => {
+    // });
   }
 
   async function playMusic(e) {
