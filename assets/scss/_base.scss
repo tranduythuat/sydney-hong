@@ -10,6 +10,7 @@
 body {
     background-color: beige;
     font-size: 12px;
+    // overflow: hidden;
     @include flex-center;
 }
 

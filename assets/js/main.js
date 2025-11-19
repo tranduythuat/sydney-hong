@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
           duration: 1,
           ease: 'power2.out',
           onComplete: () => {
-            window.scrollTo(0, 0);
+            document.body.style.overflow = "auto";
             // Nếu dùng ScrollTrigger → refresh lại
             ScrollTrigger.refresh();
           }
