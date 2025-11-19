@@ -1,8 +1,12 @@
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
 // Kích hoạt ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
 // Gọi các hiệu ứng có sẵn
 document.addEventListener("DOMContentLoaded", () => {
+  window.scrollTo(0, 0); 
   gsapFlipIn(".animate-flip");
   gsapFadeIn(".fade-in");
   gsapFadeRight(".fade-right");
