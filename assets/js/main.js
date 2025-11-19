@@ -4,7 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 // Gọi các hiệu ứng có sẵn
 document.addEventListener("DOMContentLoaded", () => {
   gsapFlipIn(".animate-flip");
-  gsapFadeIn(".animate-fade");
+  gsapFadeIn(".fade-in");
   gsapFadeRight(".fade-right");
   gsapFadeLeft(".fade-left");
   gsapFadeUp(".fade-up");
@@ -20,15 +20,30 @@ document.addEventListener("DOMContentLoaded", () => {
     repeatDelay: 0,  // delay giữa các lần lặp
     defaults: { duration: .8, ease: "power2.out" }, // giá trị mặc định
     scrollTrigger: {
-      trigger: ".box",
+      trigger: ".timeline-items",
       start: "top 90%", // khi phần tử xuất hiện 80% trong viewport
     }
   });
 
   // Thêm các animation theo thứ tự
-  tl_custom.from(".red", { x: -100, opacity: 0 })        // box đỏ bay xuống
-    .from(".blue", { x: -100, opacity: 0 }, "-=0.3")       // box xanh bay từ trái
-    .from(".green", { x: -100, opacity: 0 }, "-=0.3");    // box xanh lá phóng to dần
+  tl_custom.from(".tl-item-1", { x: -100, opacity: 0 })        // box đỏ bay xuống
+    .from(".tl-item-2", { x: -100, opacity: 0 }, "-=0.3")       // box xanh bay từ trái
+    .from(".tl-item-3", { x: -100, opacity: 0 }, "-=0.3");    // box xanh lá phóng to dần
+
+  const tl_dresscode = gsap.timeline({
+    repeatDelay: 0,  // delay giữa các lần lặp
+    defaults: { duration: .8, ease: "power2.out" }, // giá trị mặc định
+    scrollTrigger: {
+      trigger: ".color-palette",
+      start: "top 90%", // khi phần tử xuất hiện 80% trong viewport
+    }
+  });
+
+  // Thêm các animation theo thứ tự
+  tl_dresscode.from(".white", { x: -100, opacity: 0 })        // box đỏ bay xuống
+    .from(".off-white", { x: -100, opacity: 0 }, "-=0.3")       // box xanh bay từ trái
+    .from(".cream-linen", { x: -100, opacity: 0 }, "-=0.3");    // box xanh lá phóng to dần
+
 
   const envelope = document.getElementById('envelope');
   const page1 = document.getElementById('page1');

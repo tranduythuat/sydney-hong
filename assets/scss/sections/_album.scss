@@ -27,12 +27,18 @@
                 width: 100%;
                 .col {
                     width: 100%;
-                    background-color: #8f441fff;
+                    // background-color: #8f441fff;
                     margin: 1%;
                     border-radius: 15px;
                     .img-box {
                         width: 100%;
                         height: 100%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 15px;
+                        }
                     }
                 }
                 .col:nth-child(1) {

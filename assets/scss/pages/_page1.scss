@@ -29,6 +29,63 @@
     @include flex-center;
 }
 
+.shake-text {
+    animation: shakeWithPause 3s ease-in-out infinite;
+}
+
+@keyframes shakeWithPause {
+    /* Rung lắc nhẹ - kéo dài hơn */
+    0%, 100% {
+        transform: translateX(0);
+    }
+    3% {
+        transform: translateX(-3px) rotate(-1deg);
+    }
+    6% {
+        transform: translateX(3px) rotate(1deg);
+    }
+    9% {
+        transform: translateX(-3px) rotate(-1deg);
+    }
+    12% {
+        transform: translateX(3px) rotate(1deg);
+    }
+    15% {
+        transform: translateX(-3px) rotate(-1deg);
+    }
+    18% {
+        transform: translateX(3px) rotate(1deg);
+    }
+    21% {
+        transform: translateX(-2px) rotate(-0.5deg);
+    }
+    24% {
+        transform: translateX(2px) rotate(0.5deg);
+    }
+    27% {
+        transform: translateX(-2px) rotate(-0.5deg);
+    }
+    30% {
+        transform: translateX(2px) rotate(0.5deg);
+    }
+    33% {
+        transform: translateX(-1px) rotate(-0.3deg);
+    }
+    36% {
+        transform: translateX(1px) rotate(0.3deg);
+    }
+    39% {
+        transform: translateX(-1px) rotate(-0.3deg);
+    }
+    42% {
+        transform: translateX(0) rotate(0deg);
+    }
+    /* Nghỉ một đoạn */
+    42%, 100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
 .envelope {
     background: url('../../assets/images/base-bg.png') no-repeat center / cover;
     width: 100%;
@@ -87,8 +144,7 @@
             color: #000;
             position: absolute;
             bottom: 4%;
-            right: 50%;
-            transform: translateX(50%);
+            left: 43%;
             font-size: 11.5px;
             text-transform: uppercase;
             color: #814d25ff;

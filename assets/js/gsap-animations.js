@@ -6,7 +6,7 @@ function gsapFlipIn(selector) {
       scale: 1,
       filter: "brightness(1)",
       opacity: 1,
-      duration: 1.6,
+      duration: 2,
       ease: "back.out(1.5)",
       scrollTrigger: {
         trigger: el,
@@ -124,7 +124,7 @@ function gsapFlipVerticalLeft(selector) {
       rotateY: -180,
       scale: 0.8,
       opacity: 0,
-      duration: 1.2,
+      duration: 2,
       ease: "back.out(1.2)",
       transformOrigin: "center center",
       scrollTrigger: {
