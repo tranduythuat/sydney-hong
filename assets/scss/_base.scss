@@ -10,7 +10,7 @@
 body {
     background-color: beige;
     font-size: 12px;
-    // overflow: hidden;
+    overflow: hidden;
     @include flex-center;
 }
 
@@ -31,4 +31,48 @@ section {
     overflow-x: hidden;
     box-shadow: $shadow-default;
     @include flex-center;
+}
+
+/* music */
+.player {
+    position: fixed;
+    bottom: 5px;
+    right: 1%;
+    max-width: 50px;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 9999;
+    border: 1px solid var(--text-title-color);
+}
+
+.player #iconSvg {
+    width: 100%;
+    height: 100%;
+    fill: var(--text-title-color);
+}
+
+.spin {
+    animation: spin 4s linear infinite;
+}
+
+/* Định nghĩa hoạt ảnh xoay */
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 500px) {
+    .player {
+        max-width: calc((50 / 500) * 100vw);
+
+    }
 }

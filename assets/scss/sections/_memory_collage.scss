@@ -3,19 +3,73 @@
 
 .memory-collage {
     width: 100%;
-    background: url('../../assets/images/bg.png') no-repeat center / contain;
+    aspect-ratio: 500 / 580;
+    background: url('../../assets/images/bg.png') no-repeat center / cover;
     @include flex-center;
     padding: 5%;
 
     .content {
         width: 100%;
-        .box-imgs:first-child {
-            max-width: 298px;
-            aspect-ratio: 298 / 278;
-            width: 100;
-            img.main {
+        height: 100%;
+        position: relative;
+        perspective: 1000px;
+        .box-imgs {
+            position: absolute;
+            img {
                 width: 100%;
                 height: 100%;
+            }
+        }
+        .box-imgs:nth-child(2) {
+            max-width: 298px;
+            width: 100%;
+            aspect-ratio: 298 / 278;
+            top: 5%;
+            left: 0;
+        }
+
+        .box-imgs:nth-child(3) {
+            max-width: 323px;
+            width: 100%;
+            aspect-ratio: 323 / 306;
+            right: 0;
+            bottom: 6%;
+        }
+        img.flower-collage {
+            position: absolute;
+        }
+
+        img.flower-collage-1 {
+            width: 236px;
+            height: auto;
+            top: 7%;
+            right: 1%;
+        }
+
+        img.flower-collage-2 {
+            width: 191px;
+            height: auto;
+            top: 30%;
+            left: 14%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .box-imgs:nth-child(2) {
+                max-width: calc((298 / 500) * 100vw);
+            }
+    
+            .box-imgs:nth-child(3) {
+                max-width: calc((323 / 500) * 100vw);
+            }
+    
+            img.flower-collage-1 {
+                width: calc((236 / 500) * 100vw);
+            }
+    
+            img.flower-collage-2 {
+                width: calc((191 / 500) * 100vw);
             }
         }
     }

@@ -6,7 +6,7 @@ function gsapFlipIn(selector) {
       scale: 1,
       filter: "brightness(1)",
       opacity: 1,
-      duration: 1.4,
+      duration: 1.6,
       ease: "back.out(1.5)",
       scrollTrigger: {
         trigger: el,

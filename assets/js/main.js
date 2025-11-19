@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap_rotate_bl__float(".rotate-bl--float");
 
   // Tạo timeline
-  const tl = gsap.timeline({
+  const tl_custom = gsap.timeline({
     repeatDelay: 0,  // delay giữa các lần lặp
     defaults: { duration: .8, ease: "power2.out" }, // giá trị mặc định
     scrollTrigger: {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Thêm các animation theo thứ tự
-  tl.from(".red", { x: -100, opacity: 0 })        // box đỏ bay xuống
+  tl_custom.from(".red", { x: -100, opacity: 0 })        // box đỏ bay xuống
     .from(".blue", { x: -100, opacity: 0 }, "-=0.3")       // box xanh bay từ trái
     .from(".green", { x: -100, opacity: 0 }, "-=0.3");    // box xanh lá phóng to dần
 
@@ -45,12 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
           duration: 1,
           ease: 'power2.out',
           onComplete: () => {
+            playMusic();
             document.body.style.overflow = "auto";
             // Nếu dùng ScrollTrigger → refresh lại
             ScrollTrigger.refresh();
           }
         });
-
         // Khởi tạo ScrollTrigger animations
         initScrollAnimations();
       }
@@ -92,4 +92,42 @@ document.addEventListener("DOMContentLoaded", () => {
       gsap_rotate_bl__float(".rotate-bl--float");
     });
   }
+
+  async function playMusic(e) {
+    const music = document.getElementById('audio');
+    const icon = document.getElementById('iconSvg');
+    if (!music.src) {
+        alert('Chưa có nhạc, vui lòng thêm src cho audio.');
+        return;
+    }
+    if (music.paused) {
+      music.play();
+    } 
+    music.addEventListener('play', () => {
+        iconSvg.classList.add('spin');
+    });
+  }
+
+  async function toggleMusic(e) {
+    const audio = document.getElementById('audio');
+    const iconSvg = document.getElementById('iconSvg');
+    if (!audio.src) {
+        alert('Chưa có nhạc, vui lòng thêm src cho audio.');
+        return;
+    }
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+
+    audio.addEventListener('play', () => {
+        iconSvg.classList.add('spin');
+    });
+    audio.addEventListener('pause', () => {
+        iconSvg.classList.remove('spin');
+    });
+  }
+  const btn = document.getElementById('player-btn');
+  btn.addEventListener('click', toggleMusic);
 });
