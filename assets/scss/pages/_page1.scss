@@ -10,7 +10,7 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     z-index: 1000;
     margin: auto;
 }
@@ -94,8 +94,9 @@
     font-size: 12px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
+    padding-top: 15%;
     
     .save-date-text p, .date {
         text-transform: uppercase;
