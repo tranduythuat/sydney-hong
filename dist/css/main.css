@@ -167,10 +167,10 @@ header {
 }
 
 .envelope-container {
-  background: url("../../assets/images/base-bg.png") no-repeat center/cover;
+  background: url("../../assets/images/base-bg.png") repeat center/cover;
   max-width: 500px;
   width: 100%;
-  aspect-ratio: 500/822;
+  height: 100%;
   position: relative;
   overflow-x: hidden;
   display: flex;
