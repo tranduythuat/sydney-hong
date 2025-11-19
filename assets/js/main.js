@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   gsapFadeIn(".animate-fade");
   gsapFadeRight(".fade-right");
   gsapFadeLeft(".fade-left");
+  gsapFadeUp(".fade-up");
+  gsapFadeDown(".fade-down");
   gsapRotateBottomLeft(".rotate-bl");
   gsapRotateBottomRight(".rotate-br");
   gsapFlipVerticalLeft(".flip-vertical-left");
@@ -85,6 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
       gsapFadeIn(".animate-fade");
       gsapFadeRight(".fade-right");
       gsapFadeLeft(".fade-left");
+      gsapFadeUp(".fade-up");
+      gsapFadeDown(".fade-down");
       gsapRotateBottomLeft(".rotate-bl");
       gsapRotateBottomRight(".rotate-br");
       gsapFlipVerticalLeft(".flip-vertical-left");
@@ -95,7 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function playMusic(e) {
     const music = document.getElementById('audio');
-    const icon = document.getElementById('iconSvg');
     if (!music.src) {
         alert('Chưa có nhạc, vui lòng thêm src cho audio.');
         return;
