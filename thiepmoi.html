@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hồng & Sydney</title>
 
+  
+  <meta property="og:image" content="https://i.postimg.cc/KYPCyf0s/BAP5283_(2).jpg" />
+  <meta property="og:image:width" content="1200" /> 
+  <meta property="og:image:height" content="630" /> 
+
   <meta property="og:title" content="Hồng & Sydney" />
   <meta property="og:description" content="Việt Hồng & Sydney Phạm" />
   <meta property="og:type" content="website" />
@@ -267,11 +272,11 @@
           <form id="rsvpForm" class="rsvp-form">
             <div class="button-group fade-right">
               <div class="radio-wrapper">
-                <input type="radio" id="attendYes" name="attendance" value="yes" checked>
+                <input type="radio" id="attendYes" name="confirm" value="yes" checked>
                 <label for="attendYes" class="radio-label">YES - CÓ</label>
               </div>
               <div class="radio-wrapper">
-                <input type="radio" id="attendNo" name="attendance" value="no">
+                <input type="radio" id="attendNo" name="confirm" value="no">
                 <label for="attendNo" class="radio-label">NO - KHÔNG</label>
               </div>
             </div>
@@ -281,11 +286,11 @@
                 NUMBER OF ATTENDANCE
                 <span class="subtitle">/SỐ NGƯỜI ĐI CÙNG/</span>
               </label>
-              <input type="text" id="attendance" min="1" placeholder="">
+              <input type="text" id="attendance" name="attendance" placeholder="">
             </div>
 
             <div class="form-group fade-right">
-              <input type="text" id="name" placeholder="Name - TÊN">
+              <input type="text" id="name" name="name" placeholder="Name - TÊN">
             </div>
 
             <div class="form-group dietary">
@@ -310,15 +315,15 @@
             </div>
 
             <div class="form-group other fade-right">
-              <input type="text" id="other" placeholder="ANOTHER - YÊU CẦU KHÁC?">
+              <input type="text" id="other" placeholder="ANOTHER - YÊU CẦU KHÁC?" name="other">
             </div>
 
             <div class="form-group fade-right">
-              <input type="text" id="room" placeholder="ROOM SEVERVATION NUMBER / MÃ ĐẶT PHÒNG:">
+              <input type="text" id="room" name="room" placeholder="ROOM SEVERVATION NUMBER / MÃ ĐẶT PHÒNG:">
             </div>
 
             <div class="form-group fade-right">
-              <textarea id="message"
+              <textarea id="message" name="wish"
                 placeholder="DO YOU HAVE ANY WISHES OR MESSENGES FOR THE BRIDE AND GROOM? BẠN CÓ LỜI CHÚC HAY NHẮN GỬI GÌ ĐẾN CÔ DÂU VÀ CHÚ RỂ KHÔNG?"></textarea>
             </div>
 
@@ -365,7 +370,7 @@
               /HÃY CÙNG CÔ DÂU VÀ CHÚ RỂ CẬP NHẬT NHỮNG HÌNH ẢNH TRONG TIỆC CƯỚI<br>
               TẠI ĐƯỜNG LINK BÊN DƯỚI ĐỂ LƯU GIỮ LẠI NHỮNG KỶ NIỆM THẬT ĐẸP NHÉ!/
             </p>
-            <a href="https://drive.google.com/drive/folders/1yBgTNYOPml_LNXSK6NfLIh5MGJRw-y5P" target="_blank" class="action-btn fade-up">CLICK HERE - TẠI ĐÂY</a>
+            <a href="#" style="pointer-events: none;cursor: default;" class="action-btn fade-up">Please scan the QR code at the welcome desk</a>
           </div>
         </div>
       </section>
@@ -395,6 +400,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="assets/js/gsap-animations.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
